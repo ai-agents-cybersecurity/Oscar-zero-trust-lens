@@ -1,0 +1,443 @@
+{
+  "system-security-plan": {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "metadata": {
+      "title": "Demo System Security Plan",
+      "last-modified": "2024-01-15T10:00:00Z",
+      "version": "1.0",
+      "oscal-version": "1.1.2"
+    },
+    "import-profile": {
+      "href": "#profile-uuid"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://ietf.org/rfc/rfc4122",
+          "id": "demo-system-001"
+        }
+      ],
+      "system-name": "Demo Zero Trust System",
+      "description": "A demonstration system for OSCAL Zero Trust Lens analysis",
+      "security-sensitivity-level": "moderate",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "info-type-001",
+            "title": "System Documentation",
+            "description": "Internal system documentation and configurations",
+            "confidentiality-impact": {
+              "base": "moderate"
+            },
+            "integrity-impact": {
+              "base": "moderate"
+            },
+            "availability-impact": {
+              "base": "moderate"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "moderate",
+        "security-objective-integrity": "moderate",
+        "security-objective-availability": "moderate"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "The authorization boundary includes all components within the demo system network segment."
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "user-001",
+          "title": "System Administrator",
+          "role-ids": ["admin"]
+        },
+        {
+          "uuid": "user-002",
+          "title": "Standard User",
+          "role-ids": ["user"]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "comp-001",
+          "type": "software",
+          "title": "Identity Provider",
+          "description": "Enterprise identity and access management system",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "comp-002",
+          "type": "software",
+          "title": "SIEM Platform",
+          "description": "Security information and event management",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "comp-003",
+          "type": "software",
+          "title": "Endpoint Protection",
+          "description": "Endpoint detection and response solution",
+          "status": {
+            "state": "operational"
+          }
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "Control implementation for the Demo Zero Trust System",
+      "implemented-requirements": [
+        {
+          "uuid": "impl-ac-1",
+          "control-id": "ac-1",
+          "statements": [
+            {
+              "statement-id": "ac-1_smt",
+              "uuid": "stmt-ac-1",
+              "description": "Access control policy and procedures are documented and maintained."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ac-2",
+          "control-id": "ac-2",
+          "statements": [
+            {
+              "statement-id": "ac-2_smt",
+              "uuid": "stmt-ac-2",
+              "description": "Account management procedures are implemented through the Identity Provider."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ac-3",
+          "control-id": "ac-3",
+          "statements": [
+            {
+              "statement-id": "ac-3_smt",
+              "uuid": "stmt-ac-3",
+              "description": "Access enforcement is implemented via role-based access control."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ac-6",
+          "control-id": "ac-6",
+          "statements": [
+            {
+              "statement-id": "ac-6_smt",
+              "uuid": "stmt-ac-6",
+              "description": "Least privilege is enforced through fine-grained RBAC policies."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ac-17",
+          "control-id": "ac-17",
+          "statements": [
+            {
+              "statement-id": "ac-17_smt",
+              "uuid": "stmt-ac-17",
+              "description": "Remote access is controlled through VPN with MFA."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-at-1",
+          "control-id": "at-1",
+          "statements": [
+            {
+              "statement-id": "at-1_smt",
+              "uuid": "stmt-at-1",
+              "description": "Security awareness training policy is established."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-at-2",
+          "control-id": "at-2",
+          "statements": [
+            {
+              "statement-id": "at-2_smt",
+              "uuid": "stmt-at-2",
+              "description": "Annual security awareness training is provided to all users."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-au-1",
+          "control-id": "au-1",
+          "statements": [
+            {
+              "statement-id": "au-1_smt",
+              "uuid": "stmt-au-1",
+              "description": "Audit and accountability policy is documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-au-2",
+          "control-id": "au-2",
+          "statements": [
+            {
+              "statement-id": "au-2_smt",
+              "uuid": "stmt-au-2",
+              "description": "Auditable events are defined and configured in SIEM."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-au-3",
+          "control-id": "au-3",
+          "statements": [
+            {
+              "statement-id": "au-3_smt",
+              "uuid": "stmt-au-3",
+              "description": "Audit records contain sufficient detail for forensics."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-au-6",
+          "control-id": "au-6",
+          "statements": [
+            {
+              "statement-id": "au-6_smt",
+              "uuid": "stmt-au-6",
+              "description": "Audit records are reviewed weekly by security team."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ca-1",
+          "control-id": "ca-1",
+          "statements": [
+            {
+              "statement-id": "ca-1_smt",
+              "uuid": "stmt-ca-1",
+              "description": "Assessment, authorization, and monitoring policy is documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ca-2",
+          "control-id": "ca-2",
+          "statements": [
+            {
+              "statement-id": "ca-2_smt",
+              "uuid": "stmt-ca-2",
+              "description": "Annual security assessments are conducted."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-cm-1",
+          "control-id": "cm-1",
+          "statements": [
+            {
+              "statement-id": "cm-1_smt",
+              "uuid": "stmt-cm-1",
+              "description": "Configuration management policy is established."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-cm-2",
+          "control-id": "cm-2",
+          "statements": [
+            {
+              "statement-id": "cm-2_smt",
+              "uuid": "stmt-cm-2",
+              "description": "Baseline configurations are documented and maintained."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-cm-6",
+          "control-id": "cm-6",
+          "statements": [
+            {
+              "statement-id": "cm-6_smt",
+              "uuid": "stmt-cm-6",
+              "description": "Security configuration settings are enforced via policy."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ia-1",
+          "control-id": "ia-1",
+          "statements": [
+            {
+              "statement-id": "ia-1_smt",
+              "uuid": "stmt-ia-1",
+              "description": "Identification and authentication policy is documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ia-2",
+          "control-id": "ia-2",
+          "statements": [
+            {
+              "statement-id": "ia-2_smt",
+              "uuid": "stmt-ia-2",
+              "description": "Users are uniquely identified and authenticated via IdP."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ia-5",
+          "control-id": "ia-5",
+          "statements": [
+            {
+              "statement-id": "ia-5_smt",
+              "uuid": "stmt-ia-5",
+              "description": "Authenticator management includes password policies and MFA."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ir-1",
+          "control-id": "ir-1",
+          "statements": [
+            {
+              "statement-id": "ir-1_smt",
+              "uuid": "stmt-ir-1",
+              "description": "Incident response policy and procedures are documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ir-4",
+          "control-id": "ir-4",
+          "statements": [
+            {
+              "statement-id": "ir-4_smt",
+              "uuid": "stmt-ir-4",
+              "description": "Incident handling capability is established with defined roles."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-pl-1",
+          "control-id": "pl-1",
+          "statements": [
+            {
+              "statement-id": "pl-1_smt",
+              "uuid": "stmt-pl-1",
+              "description": "Planning policy is documented and reviewed annually."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ra-1",
+          "control-id": "ra-1",
+          "statements": [
+            {
+              "statement-id": "ra-1_smt",
+              "uuid": "stmt-ra-1",
+              "description": "Risk assessment policy and procedures are established."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-ra-5",
+          "control-id": "ra-5",
+          "statements": [
+            {
+              "statement-id": "ra-5_smt",
+              "uuid": "stmt-ra-5",
+              "description": "Vulnerability scanning is performed monthly."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-sc-1",
+          "control-id": "sc-1",
+          "statements": [
+            {
+              "statement-id": "sc-1_smt",
+              "uuid": "stmt-sc-1",
+              "description": "System and communications protection policy is documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-sc-7",
+          "control-id": "sc-7",
+          "statements": [
+            {
+              "statement-id": "sc-7_smt",
+              "uuid": "stmt-sc-7",
+              "description": "Boundary protection implemented via next-gen firewall."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-sc-8",
+          "control-id": "sc-8",
+          "statements": [
+            {
+              "statement-id": "sc-8_smt",
+              "uuid": "stmt-sc-8",
+              "description": "Transmission confidentiality via TLS 1.3 for all communications."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-si-1",
+          "control-id": "si-1",
+          "statements": [
+            {
+              "statement-id": "si-1_smt",
+              "uuid": "stmt-si-1",
+              "description": "System and information integrity policy is documented."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-si-2",
+          "control-id": "si-2",
+          "statements": [
+            {
+              "statement-id": "si-2_smt",
+              "uuid": "stmt-si-2",
+              "description": "Flaw remediation process is established with SLAs."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-si-3",
+          "control-id": "si-3",
+          "statements": [
+            {
+              "statement-id": "si-3_smt",
+              "uuid": "stmt-si-3",
+              "description": "Malicious code protection via endpoint protection platform."
+            }
+          ]
+        },
+        {
+          "uuid": "impl-si-4",
+          "control-id": "si-4",
+          "statements": [
+            {
+              "statement-id": "si-4_smt",
+              "uuid": "stmt-si-4",
+              "description": "System monitoring implemented through SIEM integration."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
